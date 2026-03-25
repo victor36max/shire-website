@@ -221,13 +221,8 @@ export function HowItWorks() {
           {steps.map((step, i) => (
             <ScrollFadeUp key={step.number} delay={i * 100}>
               <Card className="flex h-full flex-col p-6 lg:p-8">
-                {/* Step badge */}
-                <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">
-                  {step.number}
-                </span>
-
                 {/* Icon + Title */}
-                <div className="mt-4 flex items-center gap-2.5">
+                <div className="flex items-center gap-2.5">
                   <step.icon className="h-5 w-5 text-primary" />
                   <h3 className="text-lg font-semibold text-foreground lg:text-xl">
                     {step.title}
