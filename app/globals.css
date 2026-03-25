@@ -121,6 +121,10 @@ a, button, [role="button"] {
     animation: fadeUp 600ms ease-out 300ms both;
   }
 
+  .animate-fade-up-delay-3 {
+    animation: fadeUp 600ms ease-out 450ms both;
+  }
+
   .scroll-fade-up {
     opacity: 0;
     transform: translateY(24px);
@@ -137,6 +141,7 @@ a, button, [role="button"] {
   .animate-fade-up,
   .animate-fade-up-delay-1,
   .animate-fade-up-delay-2,
+  .animate-fade-up-delay-3,
   .scroll-fade-up {
     opacity: 1 !important;
     transform: none !important;
