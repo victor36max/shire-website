@@ -135,12 +135,15 @@ export default function RootLayout({
                     "React",
                   ],
                   featureList: [
-                    "Persistent agent workspaces with 100GB NVMe storage",
+                    "Persistent agent workspaces with up to 100GB NVMe storage",
                     "Inter-agent file-based messaging system",
                     "Shared filesystem across agents",
-                    "YAML-based agent deployment recipes",
-                    "Real-time monitoring dashboard",
+                    "Agent catalog with pre-built templates",
+                    "Real-time monitoring dashboard with browser terminal",
                     "Sub-second sleep and resume (~300ms)",
+                    "Scheduled task automation (one-time or recurring)",
+                    "Flexible deployment: Fly.io Sprites, SSH VPS, or local",
+                    "Interactive terminal access to agent VMs",
                   ],
                 },
                 {

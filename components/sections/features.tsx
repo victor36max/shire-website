@@ -2,9 +2,12 @@ import {
   Home,
   MessageSquare,
   FolderOpen,
-  FileCode,
+  BookOpen,
   BarChart3,
   Moon,
+  Clock,
+  Server,
+  Terminal,
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { ScrollFadeUp } from "@/components/scroll-animation";
@@ -14,7 +17,7 @@ const features = [
     icon: Home,
     title: "Persistent Workspaces",
     description:
-      "Each agent gets its own filesystem, inbox/outbox, scripts, and documents. Backed by Firecracker VMs with 100GB NVMe storage.",
+      "Each agent gets its own filesystem, inbox/outbox, scripts, and documents. Backed by VMs with up to 100GB NVMe storage.",
   },
   {
     icon: MessageSquare,
@@ -29,22 +32,40 @@ const features = [
       "A communal filesystem synced across all agents for collaborative work on shared artifacts.",
   },
   {
-    icon: FileCode,
-    title: "Recipe-Based Deployment",
+    icon: BookOpen,
+    title: "Agent Catalog",
     description:
-      "Define agents in simple YAML. No Docker, no complex configs. Setup scripts run idempotently.",
+      "Browse and deploy from a library of pre-built agent templates. Get started in seconds without writing configs from scratch.",
   },
   {
     icon: BarChart3,
     title: "Real-Time Dashboard",
     description:
-      "Monitor, interact with, and manage agents through a live web UI with streaming updates.",
+      "Monitor, interact with, and manage agents through a live web UI with streaming updates and browser terminal access.",
   },
   {
     icon: Moon,
     title: "Sleep & Resume",
     description:
       "Idle VMs auto-sleep preserving all state. Resume in ~300ms without rebuilding context.",
+  },
+  {
+    icon: Clock,
+    title: "Scheduled Tasks",
+    description:
+      "Automate agent work with one-time or recurring scheduled messages. Set custom intervals and let agents run on autopilot.",
+  },
+  {
+    icon: Server,
+    title: "Flexible Deployment",
+    description:
+      "Deploy anywhere: Fly.io Sprites (Firecracker microVMs), any Linux VPS via SSH, or your local machine for development.",
+  },
+  {
+    icon: Terminal,
+    title: "Interactive Terminal",
+    description:
+      "Full terminal access to agent VMs directly from the browser. Debug, inspect, and interact with your agents in real time.",
   },
 ];
 
