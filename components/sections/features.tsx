@@ -75,8 +75,8 @@ export function Features() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, i) => (
             <ScrollFadeUp key={feature.title} delay={i * 80}>
-              <Card className="p-6 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm lg:p-8">
-                <feature.icon className="mb-4 h-6 w-6 text-muted-foreground" />
+              <Card className="h-full p-6 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm lg:p-8">
+                <feature.icon className="mb-4 h-6 w-6 text-primary" />
                 <h3 className="mb-2 text-xl font-semibold text-foreground">
                   {feature.title}
                 </h3>

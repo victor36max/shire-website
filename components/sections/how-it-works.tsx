@@ -1,5 +1,5 @@
 import React from "react";
-import { BookOpen, Rocket, MessagesSquare, Zap } from "lucide-react";
+import { Users, Rocket, MessagesSquare, Zap } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { ScrollFadeUp } from "@/components/scroll-animation";
 
@@ -14,7 +14,7 @@ const steps = [
   {
     number: "02",
     title: "Build Your Team",
-    icon: BookOpen,
+    icon: Users,
     description:
       "Pick agents from the catalog or create your own. Each one gets a persistent workspace, ready to contribute.",
   },
