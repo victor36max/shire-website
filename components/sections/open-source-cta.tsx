@@ -15,7 +15,8 @@ const techBadges = [
 export function OpenSourceCta() {
   return (
     <section
-      className="py-16 md:py-20 lg:py-24"
+      id="open-source"
+      className="scroll-mt-16 py-16 md:py-20 lg:py-24"
       aria-labelledby="open-source-heading"
     >
       <div className="mx-auto max-w-2xl px-4 text-center sm:px-6 lg:px-8">

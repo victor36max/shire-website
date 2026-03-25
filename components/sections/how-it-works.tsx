@@ -36,7 +36,8 @@ setup:
 export function HowItWorks() {
   return (
     <section
-      className="bg-secondary py-16 md:py-20 lg:py-24"
+      id="how-it-works"
+      className="scroll-mt-16 bg-secondary py-16 md:py-20 lg:py-24"
       aria-labelledby="how-it-works-heading"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">

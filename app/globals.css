@@ -83,6 +83,13 @@ body {
   top: 16px;
 }
 
+/* Smooth scrolling */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 /* Scroll animations */
 @media (prefers-reduced-motion: no-preference) {
   .animate-fade-up {
