@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "standalone",
+  // Static marketing site - no dynamic data needed
 };
 
 export default nextConfig;
