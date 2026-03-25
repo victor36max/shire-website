@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/_next/"],
     },
-    sitemap: "https://shire.sh/sitemap.xml",
+    sitemap: "https://www.agents-shire.sh/sitemap.xml",
   };
 }

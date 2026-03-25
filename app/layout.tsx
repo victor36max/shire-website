@@ -17,7 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
 });
 
-const siteUrl = "https://shire.sh";
+const siteUrl = "https://www.agents-shire.sh";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -100,11 +100,11 @@ export default function RootLayout({
                   name: "Shire — Open-Source Persistent Cloud Workspaces for AI Agents",
                   description:
                     "Give your AI agents a persistent home with filesystem, inter-agent messaging, and real infrastructure.",
-                  url: "https://shire.sh/",
+                  url: "https://www.agents-shire.sh/",
                   isPartOf: {
                     "@type": "WebSite",
                     name: "Shire",
-                    url: "https://shire.sh/",
+                    url: "https://www.agents-shire.sh/",
                   },
                 },
                 {
@@ -112,7 +112,7 @@ export default function RootLayout({
                   name: "Shire",
                   description:
                     "Open-source platform that provides persistent cloud workspaces for AI agents with filesystem, inter-agent messaging, shared drive, and real-time monitoring.",
-                  url: "https://shire.sh/",
+                  url: "https://www.agents-shire.sh/",
                   applicationCategory: "DeveloperApplication",
                   operatingSystem: "Linux",
                   offers: {
@@ -149,7 +149,7 @@ export default function RootLayout({
                 {
                   "@type": "Organization",
                   name: "Shire",
-                  url: "https://shire.sh/",
+                  url: "https://www.agents-shire.sh/",
                   sameAs: [
                     "https://github.com/victor36max/shire",
                   ],
