@@ -13,10 +13,10 @@ const steps = [
   },
   {
     number: "02",
-    title: "Choose",
+    title: "Build Your Team",
     icon: BookOpen,
     description:
-      "Browse the agent catalog and pick a pre-built template — or write your own YAML recipe from scratch.",
+      "Pick agents from the catalog or create your own. Each one gets a persistent workspace, ready to contribute.",
   },
   {
     number: "03",
