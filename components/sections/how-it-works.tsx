@@ -6,17 +6,17 @@ import { ScrollFadeUp } from "@/components/scroll-animation";
 const steps = [
   {
     number: "01",
+    title: "Deploy",
+    icon: Rocket,
+    description:
+      "Spin up Shire on Fly.io Sprites, any Linux VPS via SSH, or your local machine. Your agent platform is ready in minutes.",
+  },
+  {
+    number: "02",
     title: "Choose",
     icon: BookOpen,
     description:
       "Browse the agent catalog and pick a pre-built template — or write your own YAML recipe from scratch.",
-  },
-  {
-    number: "02",
-    title: "Deploy",
-    icon: Rocket,
-    description:
-      "Push to Shire. Each agent gets a VM with its own filesystem, tools, and network — ready in seconds.",
   },
   {
     number: "03",
@@ -36,6 +36,38 @@ const steps = [
 
 function StepVisual({ index }: { index: number }) {
   if (index === 0) {
+    return (
+      <div className="rounded-lg border border-border bg-secondary p-4">
+        <div className="mb-2 text-[10px] font-medium uppercase tracking-wider text-muted-foreground">
+          Deployment options
+        </div>
+        <div className="space-y-2 text-xs">
+          <div className="flex items-center justify-between">
+            <span className="text-muted-foreground">Fly.io Sprites</span>
+            <span className="font-medium text-foreground">
+              Firecracker microVM
+            </span>
+          </div>
+          <div className="h-px bg-border" />
+          <div className="flex items-center justify-between">
+            <span className="text-muted-foreground">VPS via SSH</span>
+            <span className="font-medium text-foreground">
+              Any Linux server
+            </span>
+          </div>
+          <div className="h-px bg-border" />
+          <div className="flex items-center justify-between">
+            <span className="text-muted-foreground">Local</span>
+            <span className="font-medium text-foreground">
+              Dev &amp; testing
+            </span>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (index === 1) {
     return (
       <div className="rounded-lg border border-border bg-secondary p-4">
         <div className="mb-2 flex items-center justify-between">
@@ -60,41 +92,6 @@ function StepVisual({ index }: { index: number }) {
           <div className="flex items-center justify-between">
             <span className="text-foreground">📝 content-writer</span>
             <span className="text-muted-foreground">by community</span>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  if (index === 1) {
-    return (
-      <div className="rounded-lg border border-border bg-secondary p-4">
-        <div className="mb-2 text-[10px] font-medium uppercase tracking-wider text-muted-foreground">
-          Each agent receives
-        </div>
-        <div className="space-y-2 text-xs">
-          <div className="flex items-center justify-between">
-            <span className="text-muted-foreground">Compute</span>
-            <span className="font-medium text-foreground">
-              Up to 8 CPU / 16 GB RAM
-            </span>
-          </div>
-          <div className="h-px bg-border" />
-          <div className="flex items-center justify-between">
-            <span className="text-muted-foreground">Storage</span>
-            <span className="font-medium text-foreground">100 GB NVMe</span>
-          </div>
-          <div className="h-px bg-border" />
-          <div className="flex items-center justify-between">
-            <span className="text-muted-foreground">Startup</span>
-            <span className="font-medium text-foreground">&lt; 3 seconds</span>
-          </div>
-          <div className="h-px bg-border" />
-          <div className="flex items-center justify-between">
-            <span className="text-muted-foreground">Isolation</span>
-            <span className="font-medium text-foreground">
-              Firecracker microVM
-            </span>
           </div>
         </div>
       </div>
