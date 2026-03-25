@@ -3,11 +3,8 @@ import {
   MessageSquare,
   FolderOpen,
   BookOpen,
-  BarChart3,
-  Moon,
   Clock,
   Server,
-  Terminal,
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { ScrollFadeUp } from "@/components/scroll-animation";
@@ -38,18 +35,6 @@ const features = [
       "Browse and deploy from a library of pre-built agent templates. Get started in seconds without writing configs from scratch.",
   },
   {
-    icon: BarChart3,
-    title: "Real-Time Dashboard",
-    description:
-      "Monitor, interact with, and manage agents through a live web UI with streaming updates and browser terminal access.",
-  },
-  {
-    icon: Moon,
-    title: "Sleep & Resume",
-    description:
-      "Idle VMs auto-sleep preserving all state. Resume in ~300ms without rebuilding context.",
-  },
-  {
     icon: Clock,
     title: "Scheduled Tasks",
     description:
@@ -60,12 +45,6 @@ const features = [
     title: "Flexible Deployment",
     description:
       "Deploy anywhere: Fly.io Sprites (Firecracker microVMs), any Linux VPS via SSH, or your local machine for development.",
-  },
-  {
-    icon: Terminal,
-    title: "Interactive Terminal",
-    description:
-      "Full terminal access to agent VMs directly from the browser. Debug, inspect, and interact with your agents in real time.",
   },
 ];
 
