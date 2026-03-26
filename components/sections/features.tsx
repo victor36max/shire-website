@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import {
-  Server,
-  Blocks,
+  ShieldCheck,
+  Puzzle,
   MessageSquare,
   BookOpen,
   FolderOpen,
@@ -11,20 +11,20 @@ import { Card } from "@/components/ui/card";
 import { ScrollFadeUp } from "@/components/scroll-animation";
 
 interface Feature {
-  icon: typeof Server;
+  icon: typeof ShieldCheck;
   title: string;
   description: ReactNode;
 }
 
 const features: Feature[] = [
   {
-    icon: Server,
+    icon: ShieldCheck,
     title: "Secure Cloud Sandboxes",
     description:
       "Each agent runs in an isolated cloud VM — Fly.io Sprites, any Linux VPS via SSH, or local for development. Persistent filesystems with up to 100GB NVMe. Agents pick up exactly where they left off.",
   },
   {
-    icon: Blocks,
+    icon: Puzzle,
     title: "Works With Any Model",
     description:
       "Not locked to one AI provider. Supports Claude Code, Pi Agent, and more coming soon. Shire is the infrastructure layer — bring whatever model fits your workflow.",
