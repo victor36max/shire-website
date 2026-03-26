@@ -41,7 +41,7 @@ export function DemoVideo() {
       className="scroll-mt-16 bg-secondary py-16 md:py-20 lg:py-24"
       aria-labelledby="demo-heading"
     >
-      <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <ScrollFadeUp>
           <div className="mx-auto mb-10 max-w-2xl text-center lg:mb-12">
             <h2
@@ -70,7 +70,7 @@ export function DemoVideo() {
               aria-label="Demo of a team of AI agents communicating and collaborating in Shire"
               className="h-auto w-full"
             >
-              <source src="/demo-web.mp4" type="video/mp4" />
+              <source src="/shire-demo.mp4" type="video/mp4" />
             </video>
           </div>
 
