@@ -28,7 +28,7 @@ export function OpenSourceCta() {
           >
             Built in the open
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-4 text-base text-muted-foreground">
             Agent infrastructure should be transparent, auditable, and
             community-owned. Not locked to one model. Not locked to one cloud.
             Your agents, your workspace, your rules.
