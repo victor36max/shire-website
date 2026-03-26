@@ -32,8 +32,9 @@ export function WhatIsShire() {
                   agent disappears. Next time, you start from scratch.
                 </p>
                 <p>
-                  It&apos;s powerful for one-off tasks. But it&apos;s not
-                  collaboration — it&apos;s delegation.
+                  It&apos;s powerful for one-off tasks. But agents are a feature
+                  you opt into, not teammates you work with. That&apos;s
+                  delegation, not collaboration.
                 </p>
               </div>
             </div>
@@ -56,7 +57,8 @@ export function WhatIsShire() {
                   with a real team.
                 </p>
                 <p className="font-semibold">
-                  Not a tool you use. A team you work with.
+                  Agents aren&apos;t a feature you toggle on. They&apos;re your
+                  team.
                 </p>
               </div>
             </div>
