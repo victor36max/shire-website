@@ -20,8 +20,21 @@ const features: Feature[] = [
   {
     icon: ShieldCheck,
     title: "Secure Cloud Sandboxes",
-    description:
-      "Each agent runs in an isolated cloud VM — Fly.io Sprites, any Linux VPS via SSH, or local for development. Persistent filesystems with up to 100GB NVMe. Agents pick up exactly where they left off.",
+    description: (
+      <>
+        Each agent runs in an isolated cloud VM —{" "}
+        <a
+          href="https://fly.io/docs/sprites/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary underline underline-offset-2 decoration-1 hover:text-foreground transition-colors"
+        >
+          Fly.io Sprites
+        </a>
+        , any Linux VPS via SSH, or local for development. Agents pick up
+        exactly where they left off.
+      </>
+    ),
   },
   {
     icon: Puzzle,
