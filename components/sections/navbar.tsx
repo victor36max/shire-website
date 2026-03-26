@@ -7,9 +7,10 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { GitHubIcon } from "@/components/icons";
 
 const navLinks = [
-  { label: "Features", href: "#features" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Open Source", href: "#open-source" },
+  { label: "Features", href: "/#features" },
+  { label: "How It Works", href: "/#how-it-works" },
+  { label: "Open Source", href: "/#open-source" },
+  { label: "Blog", href: "/blog" },
 ];
 
 export function Navbar() {
@@ -22,7 +23,7 @@ export function Navbar() {
         aria-label="Main navigation"
       >
         {/* Logo */}
-        <a href="#" className="flex items-center gap-1.5 text-foreground">
+        <a href="/" className="flex items-center gap-1.5 text-foreground">
           <span className="text-xl" role="img" aria-label="leaf">
             🌿
           </span>

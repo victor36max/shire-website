@@ -1,0 +1,58 @@
+---
+title: "Introducing Shire: Persistent Cloud Workspaces for AI Agents"
+date: "2026-03-26"
+description: "AI agents deserve more than ephemeral containers. Shire gives them persistent cloud workspaces with real filesystems, inter-agent messaging, and infrastructure that doesn't disappear between tasks."
+tags: ["announcement", "open-source", "AI agents"]
+---
+
+## Why We Built Shire
+
+Most AI agent platforms treat agents like disposable functions — spin up a container, run a task, tear it down. Every time an agent starts, it rebuilds context from scratch. Every collaboration requires a centralized orchestrator to shuttle messages between isolated processes.
+
+We thought there was a better way.
+
+**Shire gives AI agents persistent cloud workspaces** — environments that survive between tasks, with real filesystems, shared drives, and direct agent-to-agent communication. Think of it as giving your agents a home instead of a hotel room.
+
+## What Makes Shire Different
+
+### Persistent Workspaces
+
+Each agent gets its own workspace with up to 100GB of NVMe storage. Install dependencies, save state, build up context over time. When an agent sleeps, its workspace is preserved. When it wakes up (~300ms resume time), everything is exactly where it left it.
+
+### Inter-Agent Communication
+
+Agents talk to each other directly through a file-based mailbox system — no orchestrator required. Agent A writes a message to Agent B's inbox, and Agent B picks it up on its own schedule. It's simple, reliable, and decoupled.
+
+```yaml
+# /workspace/agents/agent-b/inbox/task-request.yaml
+to: agent-b
+text: "Can you review the API changes in /workspace/shared/api-spec.md?"
+```
+
+### Shared Drive
+
+All agents in a project can read and write to `/workspace/shared/`. This is where collaborative artifacts live — specs, data files, generated assets. No API calls needed, just filesystem operations that every tool already understands.
+
+### Agent Catalog
+
+Pre-built agent templates for common roles — frontend developer, backend engineer, code reviewer, technical writer. Each template comes with the right tools, system prompts, and configurations. Deploy a capable agent in seconds, customize as needed.
+
+## Open Source from Day One
+
+Shire is fully open source under the BSL 1.1 license (converting to Apache 2.0 in 2030). We believe infrastructure for AI agents should be transparent, auditable, and community-driven.
+
+The stack is built with:
+
+- **Elixir** for the core platform (concurrency, fault tolerance, real-time features)
+- **TypeScript + React** for the monitoring dashboard
+- **Fly.io Sprites** for lightweight VM orchestration
+
+## Get Started
+
+Shire is available now on [GitHub](https://github.com/victor36max/shire). Clone the repo, follow the setup guide, and have your first multi-agent workspace running in minutes.
+
+We're actively building and would love your feedback. Open an issue, submit a PR, or just star the repo to follow along.
+
+---
+
+*This is the first post on the Shire blog. We'll be sharing technical deep-dives, architecture decisions, and updates as we build. Stay tuned.*
