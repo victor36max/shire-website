@@ -11,31 +11,55 @@ export function WhatIsShire() {
         <ScrollFadeUp>
           <h2
             id="what-is-shire-heading"
-            className="mb-12 text-center text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:mb-16"
+            className="text-center text-3xl font-bold tracking-tight text-foreground md:text-4xl"
             style={{ letterSpacing: "-0.02em" }}
           >
             What is Shire?
           </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-muted-foreground">
+            Shire gives your AI agents a shared home — a place where they can
+            talk to each other, share files, and keep working over days or
+            weeks.
+          </p>
         </ScrollFadeUp>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
+        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:mt-16 lg:gap-12">
           {/* For You */}
           <ScrollFadeUp>
             <div className="rounded-xl border border-border bg-background p-6 lg:p-8">
               <h3 className="mb-4 block text-xs font-semibold uppercase tracking-widest text-muted-foreground">
                 For You
               </h3>
-              <div className="space-y-3 text-base text-muted-foreground">
-                <p>
-                  Most AI agent tools follow the same pattern — you give an
-                  instruction, an agent executes it, you get the output. The
-                  agent disappears. Next time, you start from scratch.
-                </p>
-                <p>
-                  It works for defined tasks. But real projects need more —
-                  ongoing collaboration, shared context, and a team that grows
-                  with the work.
-                </p>
+              <div className="space-y-4">
+                <div>
+                  <p className="text-sm font-semibold text-foreground">
+                    Built for one&#x2011;off tasks
+                  </p>
+                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                    Most agent tools run a prompt, return an output, and
+                    disappear.
+                  </p>
+                </div>
+                <div className="h-px bg-border" />
+                <div>
+                  <p className="text-sm font-semibold text-foreground">
+                    No shared project memory
+                  </p>
+                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                    Each run starts from scratch, with little continuity across
+                    days.
+                  </p>
+                </div>
+                <div className="h-px bg-border" />
+                <div>
+                  <p className="text-sm font-semibold text-foreground">
+                    Opaque teamwork
+                  </p>
+                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                    You rarely see how agents collaborate — only the final
+                    result.
+                  </p>
+                </div>
               </div>
             </div>
           </ScrollFadeUp>
@@ -46,19 +70,36 @@ export function WhatIsShire() {
               <h3 className="mb-4 block text-xs font-semibold uppercase tracking-widest text-muted-foreground">
                 With You
               </h3>
-              <div className="space-y-3 text-base text-foreground">
-                <p>
-                  Shire is different. Your agents persist between sessions. They
-                  communicate with each other autonomously. They build on
-                  yesterday&apos;s work.
-                </p>
-                <p>
-                  You give feedback, iterate, adjust direction — like working
-                  with a real team.
-                </p>
-                <p className="font-semibold">
-                  Your agents are always there. Ready when you are.
-                </p>
+              <div className="space-y-4">
+                <div>
+                  <p className="text-sm font-semibold text-foreground">
+                    Built for long&#x2011;running projects
+                  </p>
+                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                    Agents stay attached to the same workspace over days or
+                    weeks.
+                  </p>
+                </div>
+                <div className="h-px bg-border" />
+                <div>
+                  <p className="text-sm font-semibold text-foreground">
+                    Shared drive for outputs
+                  </p>
+                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                    Plans, code, and docs land in a common drive everyone can
+                    see.
+                  </p>
+                </div>
+                <div className="h-px bg-border" />
+                <div>
+                  <p className="text-sm font-semibold text-foreground">
+                    Visible agent collaboration
+                  </p>
+                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                    Agents message each other in real time as they coordinate
+                    tasks.
+                  </p>
+                </div>
               </div>
             </div>
           </ScrollFadeUp>
