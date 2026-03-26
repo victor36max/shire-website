@@ -52,8 +52,8 @@ export function DemoVideo() {
               See it in action
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Two AI agents communicate and collaborate in real time — no
-              orchestrator needed.
+              A team of agents communicate and collaborate in real time —
+              no orchestrator needed.
             </p>
           </div>
         </ScrollFadeUp>
@@ -67,7 +67,7 @@ export function DemoVideo() {
               playsInline
               controls
               preload="metadata"
-              aria-label="Demo of two AI agents communicating and collaborating in Shire"
+              aria-label="Demo of a team of AI agents communicating and collaborating in Shire"
               className="h-auto w-full"
             >
               <source src="/demo-web.mp4" type="video/mp4" />
