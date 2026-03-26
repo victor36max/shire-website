@@ -25,17 +25,17 @@ export function Hero() {
           className="animate-fade-up text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-[3.5rem] lg:leading-[1.1]"
           style={{ letterSpacing: "-0.025em" }}
         >
-          Persistent Cloud Workspaces
-          <br className="hidden sm:inline" /> for AI Agents{" "}
+          Work with AI agents,
+          <br className="hidden sm:inline" /> not just use them{" "}
           <span role="img" aria-label="leaf">
             🌿
           </span>
         </h1>
 
         <p className="animate-fade-up-delay-1 mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl lg:leading-relaxed">
-          An open-source platform that gives every AI agent a persistent home
-          — with filesystem, tools, and a mailbox — running on real cloud
-          infrastructure.
+          Most AI tools let you assign a task and walk away. Shire gives you a
+          team of AI agents you work alongside — continuously, like colleagues.
+          Open source, persistent workspaces, real infrastructure.
         </p>
 
         <div className="animate-fade-up-delay-2 mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">

@@ -63,7 +63,7 @@ export function Features() {
               className="text-3xl font-bold tracking-tight text-foreground md:text-4xl"
               style={{ letterSpacing: "-0.02em" }}
             >
-              Everything agents need to thrive
+              Everything your team needs to thrive
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
               Persistent workspaces, real infrastructure, seamless
