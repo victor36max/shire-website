@@ -22,9 +22,9 @@ const siteUrl = "https://www.agents-shire.sh";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Shire — Work with AI Agents, Not Just Use Them | Open Source",
+  title: "Shire — Agents That Work With You, Not For You | Open Source",
   description:
-    "Most AI tools let you assign a task and walk away. Shire gives you a team of AI agents you work alongside — continuously, like colleagues. Open-source persistent workspaces with filesystem, inter-agent messaging, and real infrastructure.",
+    "An open-source platform where AI agents collaborate with you continuously — like teammates, not tools. Persistent workspaces, inter-agent messaging, shared filesystems.",
   keywords: [
     "AI agent platform",
     "persistent AI agent workspace",
@@ -47,23 +47,23 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteUrl,
     siteName: "Shire",
-    title: "Shire — Work with AI Agents, Not Just Use Them | Open Source",
+    title: "Shire — Agents That Work With You, Not For You",
     description:
-      "Most AI tools let you assign a task and walk away. Shire gives you a team of AI agents you work alongside — continuously, like colleagues. Open source, persistent workspaces, real infrastructure.",
+      "An open-source platform where AI agents collaborate with you continuously — like teammates, not tools. Persistent workspaces, inter-agent messaging, shared filesystems.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Shire — Work with AI agents, not just use them. Open-source persistent workspaces with real infrastructure.",
+        alt: "Shire — Agents that work with you, not for you. Open-source persistent cloud workspaces for AI agents.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shire — Work with AI Agents, Not Just Use Them | Open Source",
+    title: "Shire — Agents That Work With You, Not For You",
     description:
-      "Most AI tools let you assign a task and walk away. Shire gives you a team of AI agents you work alongside — continuously, like colleagues. Open source.",
+      "An open-source platform where AI agents collaborate with you continuously — like teammates, not tools. Persistent workspaces, inter-agent messaging, shared filesystems.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -101,9 +101,9 @@ export default function RootLayout({
               "@graph": [
                 {
                   "@type": "WebPage",
-                  name: "Shire — Work with AI Agents, Not Just Use Them | Open Source",
+                  name: "Shire — Agents That Work With You, Not For You | Open Source",
                   description:
-                    "Most AI tools let you assign a task and walk away. Shire gives you a team of AI agents you work alongside — continuously, like colleagues.",
+                    "An open-source platform where AI agents collaborate with you continuously — like teammates, not tools. Persistent workspaces, inter-agent messaging, shared filesystems.",
                   url: "https://www.agents-shire.sh/",
                   isPartOf: {
                     "@type": "WebSite",
@@ -115,7 +115,7 @@ export default function RootLayout({
                   "@type": "SoftwareApplication",
                   name: "Shire",
                   description:
-                    "Open-source platform that provides persistent cloud workspaces for AI agents with filesystem, inter-agent messaging, shared drive, and real-time monitoring.",
+                    "Open-source platform where AI agents work with you, not for you. Persistent cloud workspaces with filesystem, inter-agent messaging, shared drive, and real-time monitoring.",
                   url: "https://www.agents-shire.sh/",
                   applicationCategory: "DeveloperApplication",
                   operatingSystem: "Linux",

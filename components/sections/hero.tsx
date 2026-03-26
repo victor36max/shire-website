@@ -25,8 +25,8 @@ export function Hero() {
           className="animate-fade-up text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-[3.5rem] lg:leading-[1.1]"
           style={{ letterSpacing: "-0.025em" }}
         >
-          Work with AI agents,
-          <br className="hidden sm:inline" /> not just use them{" "}
+          Agents that work with you,
+          <br className="hidden sm:inline" /> not for you{" "}
           <span role="img" aria-label="leaf">
             🌿
           </span>
