@@ -1,26 +1,58 @@
+import type { ReactNode } from "react";
 import {
-  Home,
-  MessageSquare,
-  FolderOpen,
-  BookOpen,
-  Clock,
   Server,
+  Blocks,
+  MessageSquare,
+  BookOpen,
+  FolderOpen,
+  Clock,
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { ScrollFadeUp } from "@/components/scroll-animation";
 
-const features = [
+interface Feature {
+  icon: typeof Server;
+  title: string;
+  description: ReactNode;
+}
+
+const features: Feature[] = [
   {
-    icon: Home,
-    title: "Persistent Workspaces",
+    icon: Server,
+    title: "Secure Cloud Sandboxes",
     description:
-      "Each agent gets its own filesystem, inbox/outbox, scripts, and documents. Backed by VMs with up to 100GB NVMe storage.",
+      "Each agent runs in an isolated cloud VM — Fly.io Sprites, any Linux VPS via SSH, or local for development. Persistent filesystems with up to 100GB NVMe. Agents pick up exactly where they left off.",
+  },
+  {
+    icon: Blocks,
+    title: "Works With Any Model",
+    description:
+      "Not locked to one AI provider. Supports Claude Code, Pi Agent, and more coming soon. Shire is the infrastructure layer — bring whatever model fits your workflow.",
   },
   {
     icon: MessageSquare,
-    title: "Inter-Agent Communication",
+    title: "Autonomous Agent Communication",
     description:
-      "File-based mailbox system. Agents discover peers and collaborate through structured messaging.",
+      "Agents discover peers and collaborate on their own — no orchestrator required. Direct messaging, shared context, real teamwork between agents.",
+  },
+  {
+    icon: BookOpen,
+    title: "Agent Catalog",
+    description: (
+      <>
+        Browse and deploy from a community-maintained library of pre-built
+        agents. Powered by{" "}
+        <a
+          href="https://github.com/msitarzewski/agency-agents"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary underline underline-offset-2 decoration-1 hover:text-foreground transition-colors"
+        >
+          agency-agents
+        </a>
+        . Get a capable team running in seconds.
+      </>
+    ),
   },
   {
     icon: FolderOpen,
@@ -29,22 +61,10 @@ const features = [
       "A communal filesystem synced across all agents for collaborative work on shared artifacts.",
   },
   {
-    icon: BookOpen,
-    title: "Agent Catalog",
-    description:
-      "Browse and deploy from a library of pre-built agent templates. Get started in seconds without writing configs from scratch.",
-  },
-  {
     icon: Clock,
     title: "Scheduled Tasks",
     description:
       "Automate agent work with one-time or recurring scheduled messages. Set custom intervals and let agents run on autopilot.",
-  },
-  {
-    icon: Server,
-    title: "Flexible Deployment",
-    description:
-      "Deploy anywhere: Fly.io Sprites (Firecracker microVMs), any Linux VPS via SSH, or your local machine for development.",
   },
 ];
 
