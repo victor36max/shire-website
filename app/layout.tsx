@@ -55,7 +55,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Shire — Where agents live, and flourish. Open-source persistent cloud workspaces for AI agents.",
+        alt: "Shire — Work with AI agents, not just use them. Open-source persistent workspaces with real infrastructure.",
       },
     ],
   },
