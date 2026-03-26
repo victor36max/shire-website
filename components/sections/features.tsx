@@ -24,7 +24,7 @@ const features: Feature[] = [
       <>
         Each agent runs in an isolated cloud VM —{" "}
         <a
-          href="https://fly.io/docs/sprites/"
+          href="https://sprites.dev/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-primary underline underline-offset-2 decoration-1 hover:text-foreground transition-colors"
