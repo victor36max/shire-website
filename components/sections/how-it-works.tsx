@@ -1,36 +1,58 @@
-import React from "react";
+import React, { type ReactNode } from "react";
 import { Users, Rocket, MessagesSquare, Zap } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { ScrollFadeUp } from "@/components/scroll-animation";
 
-const steps = [
+const spritesLink = (
+  <a
+    href="https://sprites.dev/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-primary underline underline-offset-2 decoration-1 hover:text-foreground transition-colors"
+  >
+    Fly.io Sprites
+  </a>
+);
+
+interface Step {
+  number: string;
+  title: string;
+  icon: typeof Rocket;
+  description: ReactNode;
+}
+
+const steps: Step[] = [
   {
     number: "01",
     title: "Deploy",
     icon: Rocket,
-    description:
-      "Spin up Shire on Fly.io Sprites, any Linux VPS via SSH, or your local machine. Your agent platform is ready in minutes.",
+    description: (
+      <>
+        Set up your team&apos;s home — {spritesLink}, any Linux VPS via SSH, or
+        local for development. Ready in minutes.
+      </>
+    ),
   },
   {
     number: "02",
     title: "Build Your Team",
     icon: Users,
     description:
-      "Pick agents from the catalog or create your own. Each one gets a persistent workspace, ready to contribute.",
+      "Pick agents from the community catalog or create your own. Define roles, give them context — assemble the team you want to work with.",
   },
   {
     number: "03",
     title: "Collaborate",
     icon: MessagesSquare,
     description:
-      "Agents discover peers, exchange messages via mailboxes, and share files through the shared drive.",
+      "Work alongside your agents — give feedback, adjust direction. Agents talk to each other autonomously, sharing files and coordinating without you routing every message.",
   },
   {
     number: "04",
     title: "Sleep & Resume",
     icon: Zap,
     description:
-      "Idle agents auto-sleep preserving all state. They wake in ~300ms, right where they left off.",
+      "When you're done for the day, agents sleep preserving all state. Come back tomorrow — they wake in ~300ms, right where you left off. No context lost.",
   },
 ];
 
@@ -43,7 +65,14 @@ function StepVisual({ index }: { index: number }) {
         </div>
         <div className="space-y-2 text-xs">
           <div className="flex items-center justify-between">
-            <span className="text-muted-foreground">Fly.io Sprites</span>
+            <a
+              href="https://sprites.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary underline underline-offset-2 decoration-1 hover:text-foreground transition-colors"
+            >
+              Fly.io Sprites
+            </a>
             <span className="font-medium text-foreground">
               Firecracker microVM
             </span>

@@ -29,8 +29,9 @@ export function OpenSourceCta() {
             Built in the open
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Shire is open-source and community-driven. We&apos;d love your
-            help.
+            Agent infrastructure should be transparent, auditable, and
+            community-owned. Not locked to one model. Not locked to one cloud.
+            Your agents, your workspace, your rules.
           </p>
           <div className="mt-8">
             <a
@@ -44,6 +45,9 @@ export function OpenSourceCta() {
               </Button>
             </a>
           </div>
+          <p className="mt-4 text-sm text-muted-foreground">
+            Licensed under BSL 1.1 — converts to Apache 2.0 in 2030.
+          </p>
           <div className="mt-10 flex flex-wrap justify-center gap-3">
             {techBadges.map((tech) => (
               <Badge key={tech} variant="secondary">

@@ -11,7 +11,7 @@ export function Footer() {
             Shire
           </span>
           <p className="mt-1 text-sm opacity-60">
-            Where agents live, and flourish.
+            Your team. Always on.
           </p>
         </div>
 

@@ -19,42 +19,44 @@ export function WhatIsShire() {
         </ScrollFadeUp>
 
         <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
-          {/* The Problem */}
+          {/* For You */}
           <ScrollFadeUp>
             <div className="rounded-xl border border-border bg-background p-6 lg:p-8">
               <h3 className="mb-4 block text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                The Problem
+                For You
               </h3>
               <div className="space-y-3 text-base text-muted-foreground">
                 <p>
-                  Most agent platforms treat agents as stateless functions —
-                  spin up, execute, tear down. No persistent memory, no
-                  workspace, no way for agents to collaborate.
+                  Most AI agent tools follow the same pattern — you give an
+                  instruction, an agent executes it, you get the output. The
+                  agent disappears. Next time, you start from scratch.
                 </p>
                 <p>
-                  Every run starts from scratch. Context is lost. Files
-                  disappear. Agents can&apos;t build on previous work or
-                  coordinate with peers.
+                  It&apos;s powerful for one-off tasks. But it&apos;s not
+                  collaboration — it&apos;s delegation.
                 </p>
               </div>
             </div>
           </ScrollFadeUp>
 
-          {/* The Shire Way */}
+          {/* With You */}
           <ScrollFadeUp delay={100}>
             <div className="rounded-xl border border-border bg-background p-6 lg:p-8">
               <h3 className="mb-4 block text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                The Shire Way
+                With You
               </h3>
               <div className="space-y-3 text-base text-foreground">
                 <p>
-                  Shire gives each agent a persistent cloud workspace: a
-                  filesystem, a mailbox, shared storage, and real compute.
-                  Agents don&apos;t just run — they live, collaborate, and
-                  resume where they left off.
+                  Shire is different. Your agents persist between sessions. They
+                  communicate with each other autonomously. They build on
+                  yesterday&apos;s work.
+                </p>
+                <p>
+                  You give feedback, iterate, adjust direction — like working
+                  with a real team.
                 </p>
                 <p className="font-semibold">
-                  Agents don&apos;t just execute. They inhabit.
+                  Not a tool you use. A team you work with.
                 </p>
               </div>
             </div>

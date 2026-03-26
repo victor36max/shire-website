@@ -34,8 +34,8 @@ export function Hero() {
 
         <p className="animate-fade-up-delay-1 mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl lg:leading-relaxed">
           Most AI tools let you assign a task and walk away. Shire gives you a
-          team of AI agents you work alongside — continuously, like colleagues.
-          Open source, persistent workspaces, real infrastructure.
+          team of AI agents you actually work alongside — they persist, they
+          communicate, they pick up where they left off. Open source.
         </p>
 
         <div className="animate-fade-up-delay-2 mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
