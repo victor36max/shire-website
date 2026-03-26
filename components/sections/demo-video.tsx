@@ -44,16 +44,20 @@ export function DemoVideo() {
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <ScrollFadeUp>
           <div className="mx-auto mb-10 max-w-2xl text-center lg:mb-12">
+            <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+              See it in action
+            </p>
             <h2
               id="demo-heading"
-              className="text-3xl font-bold tracking-tight text-foreground md:text-4xl"
+              className="mt-3 text-3xl font-bold tracking-tight text-foreground md:text-4xl"
               style={{ letterSpacing: "-0.02em" }}
             >
-              See it in action
+              Watch a real Shire team build this website
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              A team of agents communicate and collaborate in real time —
-              no orchestrator needed.
+              This is the actual Shire project that built this homepage — a
+              team of agents communicating, coordinating, and shipping work in
+              real time. No custom orchestrator.
             </p>
           </div>
         </ScrollFadeUp>
