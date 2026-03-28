@@ -1,37 +1,22 @@
-import React, { type ReactNode } from "react";
+import React from "react";
 import { Users, Rocket, MessagesSquare, Zap } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { ScrollFadeUp } from "@/components/scroll-animation";
-
-const spritesLink = (
-  <a
-    href="https://sprites.dev/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-primary underline underline-offset-2 decoration-1 hover:text-foreground transition-colors"
-  >
-    Fly.io Sprites
-  </a>
-);
 
 interface Step {
   number: string;
   title: string;
   icon: typeof Rocket;
-  description: ReactNode;
+  description: string;
 }
 
 const steps: Step[] = [
   {
     number: "01",
-    title: "Deploy",
+    title: "Install",
     icon: Rocket,
-    description: (
-      <>
-        Set up your team&apos;s home — {spritesLink}, any Linux VPS via SSH, or
-        local for development. Ready in minutes.
-      </>
-    ),
+    description:
+      "Run npm install -g agents-shire and start with a single command. Deploy on any Linux VPS or run locally. Ready in minutes.",
   },
   {
     number: "02",
@@ -61,35 +46,19 @@ function StepVisual({ index }: { index: number }) {
     return (
       <div className="rounded-lg border border-border bg-secondary p-4">
         <div className="mb-2 text-[10px] font-medium uppercase tracking-wider text-muted-foreground">
-          Deployment options
+          Quick start
         </div>
-        <div className="space-y-2 text-xs">
-          <div className="flex items-center justify-between">
-            <a
-              href="https://sprites.dev/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary underline underline-offset-2 decoration-1 hover:text-foreground transition-colors"
-            >
-              Fly.io Sprites
-            </a>
-            <span className="font-medium text-foreground">
-              Firecracker microVM
-            </span>
+        <div className="space-y-2 font-mono text-xs">
+          <div className="text-muted-foreground">
+            <span className="text-primary">$</span> npm install -g agents-shire
+          </div>
+          <div className="text-muted-foreground">
+            <span className="text-primary">$</span> shire
           </div>
           <div className="h-px bg-border" />
-          <div className="flex items-center justify-between">
-            <span className="text-muted-foreground">VPS via SSH</span>
-            <span className="font-medium text-foreground">
-              Any Linux server
-            </span>
-          </div>
-          <div className="h-px bg-border" />
-          <div className="flex items-center justify-between">
-            <span className="text-muted-foreground">Local</span>
-            <span className="font-medium text-foreground">
-              Dev &amp; testing
-            </span>
+          <div className="flex items-center justify-between text-muted-foreground">
+            <span>Server running on</span>
+            <span className="font-medium text-foreground">localhost:8080</span>
           </div>
         </div>
       </div>

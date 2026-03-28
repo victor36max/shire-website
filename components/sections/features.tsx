@@ -20,27 +20,14 @@ const features: Feature[] = [
   {
     icon: ShieldCheck,
     title: "Secure Cloud Sandboxes",
-    description: (
-      <>
-        Each agent runs in an isolated cloud VM —{" "}
-        <a
-          href="https://sprites.dev/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-primary underline underline-offset-2 decoration-1 hover:text-foreground transition-colors"
-        >
-          Fly.io Sprites
-        </a>
-        , any Linux VPS via SSH, or local for development. Agents pick up
-        exactly where they left off.
-      </>
-    ),
+    description:
+      "Each agent runs in its own isolated workspace. Install globally with npm, deploy on any Linux VPS, or run locally for development. Agents pick up exactly where they left off.",
   },
   {
     icon: Puzzle,
     title: "Works With Any Model",
     description:
-      "Not locked to one AI provider. Supports Claude Code, Pi Agent, and more coming soon. Shire is the infrastructure layer — bring whatever model fits your workflow.",
+      "Not locked to one AI provider. Supports 7+ model providers through Claude Code and Pi Agent SDK — Anthropic, OpenAI, Google, Groq, xAI, Mistral, and OpenRouter.",
   },
   {
     icon: MessageSquare,

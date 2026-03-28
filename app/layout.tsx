@@ -134,20 +134,19 @@ export default function RootLayout({
                   license:
                     "https://github.com/victor36max/shire/blob/main/LICENSE",
                   programmingLanguage: [
-                    "Elixir",
                     "TypeScript",
                     "React",
                   ],
                   featureList: [
-                    "Persistent agent workspaces with up to 100GB NVMe storage",
-                    "Inter-agent file-based messaging system",
+                    "Persistent agent workspaces with isolated environments",
+                    "Autonomous inter-agent messaging system",
                     "Shared filesystem across agents",
-                    "Agent catalog with pre-built templates",
+                    "Community agent catalog with pre-built templates",
                     "Real-time monitoring dashboard with browser terminal",
                     "Sub-second sleep and resume (~300ms)",
                     "Scheduled task automation (one-time or recurring)",
-                    "Flexible deployment: Fly.io Sprites, SSH VPS, or local",
-                    "Interactive terminal access to agent VMs",
+                    "7+ model providers: Anthropic, OpenAI, Google, Groq, xAI, Mistral, OpenRouter",
+                    "Install globally via npm, deploy on any Linux VPS or local",
                   ],
                 },
                 {

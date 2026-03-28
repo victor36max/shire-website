@@ -4,12 +4,12 @@ import { Badge } from "@/components/ui/badge";
 import { ScrollFadeUp } from "@/components/scroll-animation";
 
 const techBadges = [
-  "Elixir",
-  "Phoenix",
-  "React",
-  "Tailwind",
-  "Firecracker",
   "Bun",
+  "Hono",
+  "React 19",
+  "Tailwind 4",
+  "SQLite",
+  "TypeScript",
 ];
 
 export function OpenSourceCta() {
