@@ -38,7 +38,15 @@ export function Hero() {
           code, content, ops, and more. Self‑host from GitHub.
         </p>
 
-        <div className="animate-fade-up-delay-2 mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        {/* Install command box */}
+        <div className="animate-fade-up-delay-2 mx-auto mt-8 max-w-md">
+          <div className="flex items-center justify-center rounded-lg border border-border bg-secondary px-4 py-3 font-mono text-sm">
+            <span className="text-primary">$</span>
+            <span className="ml-2 text-foreground">npm install -g agents-shire</span>
+          </div>
+        </div>
+
+        <div className="animate-fade-up-delay-2 mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a
             href="https://github.com/victor36max/shire"
             target="_blank"
