@@ -143,7 +143,7 @@ export default function RootLayout({
                     "Shared filesystem across agents",
                     "Community agent catalog with pre-built templates",
                     "Real-time monitoring dashboard with browser terminal",
-                    "Sub-second sleep and resume (~300ms)",
+                    "Sleep and resume with full state preservation",
                     "Scheduled task automation (one-time or recurring)",
                     "7+ model providers: Anthropic, OpenAI, Google, Groq, xAI, Mistral, OpenRouter",
                     "Install globally via npm, deploy on any Linux VPS or local",

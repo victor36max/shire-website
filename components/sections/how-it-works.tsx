@@ -37,7 +37,7 @@ const steps: Step[] = [
     title: "Sleep & Resume",
     icon: Zap,
     description:
-      "When you're done for the day, agents sleep preserving all state. Come back tomorrow — they wake in ~300ms, right where you left off. No context lost.",
+      "When you're done for the day, agents sleep preserving all state. Come back tomorrow — they wake right where you left off. No context lost.",
   },
 ];
 
@@ -144,7 +144,7 @@ function StepVisual({ index }: { index: number }) {
           </span>
         </div>
         <div className="flex items-center justify-center py-1">
-          <span className="text-muted-foreground">↓ ~300ms ↓</span>
+          <span className="text-muted-foreground">↓ instant resume ↓</span>
         </div>
         <div className="flex items-center gap-2">
           <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-primary/40 text-[8px] text-primary">
