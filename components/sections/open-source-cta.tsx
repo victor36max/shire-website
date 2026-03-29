@@ -46,7 +46,7 @@ export function OpenSourceCta() {
             </a>
           </div>
           <p className="mt-4 text-sm text-muted-foreground">
-            Licensed under BSL 1.1 — converts to Apache 2.0 in 2030.
+            Licensed under MIT — free to use, modify, and distribute.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-3">
             {techBadges.map((tech) => (

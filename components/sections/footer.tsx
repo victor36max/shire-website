@@ -45,7 +45,7 @@ export function Footer() {
 
         {/* Copyright */}
         <p className="mt-8 text-xs opacity-50">
-          &copy; 2026 Shire. Licensed under Business Source License 1.1 (converts to Apache 2.0 in 2030).
+          &copy; 2026 Shire. Licensed under MIT.
         </p>
         <p className="mt-2 text-xs opacity-40">
           Shire is an open-source persistent cloud workspace platform for AI
