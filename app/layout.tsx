@@ -138,7 +138,7 @@ export default function RootLayout({
                     "React",
                   ],
                   featureList: [
-                    "Persistent agent workspaces with isolated environments",
+                    "Persistent dedicated workspaces for each agent",
                     "Autonomous inter-agent messaging system",
                     "Shared filesystem across agents",
                     "Community agent catalog with pre-built templates",

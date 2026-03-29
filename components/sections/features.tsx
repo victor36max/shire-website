@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import {
-  ShieldCheck,
+  HardDrive,
   Puzzle,
   MessageSquare,
   BookOpen,
@@ -11,17 +11,17 @@ import { Card } from "@/components/ui/card";
 import { ScrollFadeUp } from "@/components/scroll-animation";
 
 interface Feature {
-  icon: typeof ShieldCheck;
+  icon: typeof HardDrive;
   title: string;
   description: ReactNode;
 }
 
 const features: Feature[] = [
   {
-    icon: ShieldCheck,
-    title: "Secure Cloud Sandboxes",
+    icon: HardDrive,
+    title: "Persistent Workspaces",
     description:
-      "Each agent runs in its own isolated workspace. Install globally with npm, deploy on any Linux VPS, or run locally for development. Agents pick up exactly where they left off.",
+      "Each agent gets its own dedicated workspace. Install globally with npm, deploy on any Linux VPS, or run locally for development. Agents pick up exactly where they left off.",
   },
   {
     icon: Puzzle,
