@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     "AI agent infrastructure",
     "multi-agent collaboration",
     "AI agent orchestration",
-    "AI agent cloud workspace",
+    "AI agent workspace",
     "stateful AI agents",
   ],
   authors: [
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Shire — Agents that work with you, not for you. Open-source persistent cloud workspaces for AI agents.",
+        alt: "Shire — Agents that work with you, not for you. Open-source persistent workspaces for AI agents.",
       },
     ],
   },
@@ -115,10 +115,10 @@ export default function RootLayout({
                   "@type": "SoftwareApplication",
                   name: "Shire",
                   description:
-                    "Open-source platform where AI agents work with you, not for you. Persistent cloud workspaces with filesystem, inter-agent messaging, shared drive, and real-time monitoring.",
+                    "Open-source platform where AI agents work with you, not for you. Persistent workspaces with filesystem, inter-agent messaging, shared drive, and real-time monitoring.",
                   url: "https://www.agents-shire.sh/",
                   applicationCategory: "DeveloperApplication",
-                  operatingSystem: "Linux",
+                  operatingSystem: "Linux, macOS, Windows",
                   offers: {
                     "@type": "Offer",
                     price: "0",
@@ -145,8 +145,8 @@ export default function RootLayout({
                     "Real-time monitoring dashboard with browser terminal",
                     "Sleep and resume with full state preservation",
                     "Scheduled task automation (one-time or recurring)",
-                    "7+ model providers: Anthropic, OpenAI, Google, Groq, xAI, Mistral, OpenRouter",
-                    "Install globally via npm, deploy on any Linux VPS or local",
+                    "Supports Claude Code, OpenCode, Pi Agent and more",
+                    "Install globally via npm, run on macOS, Linux, or Windows",
                   ],
                 },
                 {

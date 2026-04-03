@@ -16,7 +16,7 @@ const steps: Step[] = [
     title: "Install",
     icon: Rocket,
     description:
-      "Run npm install -g agents-shire and start with a single command. Deploy on any Linux VPS or run locally. Ready in minutes.",
+      "Run npm install -g agents-shire and start with a single command. Run anywhere — macOS, Linux, or Windows. Ready in minutes.",
   },
   {
     number: "02",
@@ -140,7 +140,7 @@ function StepVisual({ index }: { index: number }) {
             ●
           </span>
           <span className="text-muted-foreground">
-            Agent sleeping — 0 CPU, 0 RAM
+            Agent sleeping — state saved
           </span>
         </div>
         <div className="flex items-center justify-center py-1">

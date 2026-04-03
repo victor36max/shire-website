@@ -1,11 +1,12 @@
 import type { ReactNode } from "react";
 import {
   HardDrive,
-  Puzzle,
+  Layers,
   MessageSquare,
   BookOpen,
   FolderOpen,
   Clock,
+  Sparkles,
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { ScrollFadeUp } from "@/components/scroll-animation";
@@ -21,13 +22,13 @@ const features: Feature[] = [
     icon: HardDrive,
     title: "Persistent Workspaces",
     description:
-      "Each agent gets its own dedicated workspace. Install globally with npm, deploy on any Linux VPS, or run locally for development. Agents pick up exactly where they left off.",
+      "Each agent gets its own dedicated workspace. Install globally with npm and run anywhere — macOS, Linux, or Windows. Agents pick up exactly where they left off.",
   },
   {
-    icon: Puzzle,
-    title: "Works With Any Model",
+    icon: Layers,
+    title: "Multi-Runtime Support",
     description:
-      "Not locked to one AI provider. Supports 7+ model providers through Claude Code and Pi Agent SDK — Anthropic, OpenAI, Google, Groq, xAI, Mistral, and OpenRouter.",
+      "Not locked to one agent runtime. Supports Claude Code, OpenCode, Pi Agent and more — bring your preferred coding agent and model.",
   },
   {
     icon: MessageSquare,
@@ -61,10 +62,16 @@ const features: Feature[] = [
       "A communal filesystem synced across all agents for collaborative work on shared artifacts.",
   },
   {
+    icon: Sparkles,
+    title: "Agent Skills",
+    description:
+      "Agents learn and store reusable skills over time. Skills are saved to the filesystem and shared across sessions — your team gets smarter the more you work together.",
+  },
+  {
     icon: Clock,
     title: "Scheduled Tasks",
     description:
-      "Automate agent work with one-time or recurring scheduled messages. Set custom intervals and let agents run on autopilot.",
+      "Automate agent work with scheduled messages and get notified via Discord, Slack, or Telegram when tasks complete.",
   },
 ];
 

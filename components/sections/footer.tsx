@@ -48,8 +48,7 @@ export function Footer() {
           &copy; 2026 Shire. Licensed under MIT.
         </p>
         <p className="mt-2 text-xs opacity-40">
-          Shire is an open-source persistent cloud workspace platform for AI
-          agents.
+          Shire is an open-source persistent workspace platform for AI agents.
         </p>
       </div>
     </footer>
