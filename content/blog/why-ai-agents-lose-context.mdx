@@ -1,0 +1,116 @@
+---
+title: "Why AI agents lose context — and why the popular fixes are solving the wrong problem"
+date: "2026-04-04"
+description: "Why AI agents lose context isn't a memory problem — it's a persistence problem. Here's why RAG and memory SDKs don't fully fix it, and what actually does."
+tags: ["ai-agents", "context-window", "agent-memory", "llm", "agentic-ai"]
+---
+
+I built a RAG-as-a-service platform for AI agents. Vector RAG, Graph RAG, LightRAG — we worked through the full stack trying to understand why AI agents lose context mid-task. Each method had its own failure modes: chunking that fractures relationships between ideas, graph pipelines with brutal token overhead, retrieval that gives you broad recall *or* precision but rarely both.
+
+Then something clicked. Every architecture we built was solving a problem that largely disappeared when you just handed the model the right document in full. We weren't making agents smarter. We were compensating for keeping information away from them.
+
+That's when I stopped building retrieval infrastructure and started thinking about the actual problem. Here's what I found.
+
+---
+
+## The pain is real — and you're not imagining it
+
+If you've built with AI agents for any length of time, you've felt this. Someone on r/ClaudeAI described it perfectly: *"like supervising a junior developer with short-term memory loss."*
+
+That's exactly it.
+
+You spend twenty minutes getting an agent up to speed — your stack, your constraints, your naming conventions, the decisions already made. It does good work. You come back the next day and do it again. Every session, from scratch.
+
+Or worse: mid-session. The agent suggests an approach you explicitly rejected an hour ago. A developer on r/LocalLLaMA put it plainly: *"it forgets elements of my project/chat that I very explicitly defined earlier."* Not a complaint about AI in the abstract. A complaint about something built, something that kept breaking in the same place.
+
+This isn't fringe. 2026 industry data shows that 30% of AI conversations require users to re-prompt with information they've already given. Nearly a third. That's not a UX issue. That's an architecture issue.
+
+---
+
+## Why AI agents keep losing context
+
+There are two distinct problems here.
+
+**Problem one: context bloat within a session.** As a conversation grows — tool calls, search results, back-and-forth — the context window fills up. And a full context window isn't just an LLM that's seen a lot. It's a degraded one.
+
+Chroma Research tested 18 frontier models — including Claude Opus 4, Claude Sonnet 4, GPT-4.1, Gemini 2.5, and Qwen3 — and found every single one showed declining performance as context grew, not just at the limits but throughout. There's a name for this: context rot. A model advertised at 200k tokens becomes unreliable around 130k. The window on the box isn't the window you get.
+
+Think of attention like hearing someone in a crowded room. Ten people: easy. Ten thousand: you catch words but lose the thread. As context fills, older content doesn't disappear — it drowns. That carefully-defined constraint you set at the start of the session? Background noise by turn twenty.
+
+**Problem two: memory loss across sessions.** At the model level, LLMs don't persist anything between API calls. Every new session starts with exactly what you put in the context window and nothing else. Your agent isn't *forgetting* what you told it last session. It was never told. The model itself has no memory; only the application layer does, and most don't.
+
+When context gets too long, providers compact it — silently compressing earlier conversation history to free up room. Compaction isn't a wipe; it preserves the broad strokes. But it's lossy. The nuanced insight you reached three hours in, the specific constraint that took twenty minutes to establish, the decision trail that explains why the code looks the way it does — that's exactly the kind of thing that gets compressed away. You don't find out until the agent starts confidently doing something you already ruled out.
+
+Here's the trap: these two problems feed each other. Context bloat forces compaction, and compaction loses the precise context that made the session valuable. The harder you work to build understanding with an agent, the more you have to lose.
+
+---
+
+## The popular fixes
+
+The AI tooling ecosystem's response to this has been impressive. I say that without irony — I was part of it.
+
+**RAG pipelines** retrieve relevant context on demand rather than loading everything at once. Smart, and genuinely useful for many applications. But retrieval quality is the ceiling, and it doesn't touch the between-sessions problem at all.
+
+**Summarization buffers** compress older turns into a running summary to keep the context window lean. Better than nothing. But compression is lossy — errors in the summary propagate forward — and when auto-compaction runs silently in the background, users notice only when the agent starts acting confused mid-task.
+
+**Memory SDKs** — Mem0, LangMem, and others — are the most sophisticated response. Semantic extraction, graph memory, tiered storage across sessions. Genuinely impressive engineering. The best implementations show 90% latency improvements and 90% fewer tokens versus naively passing full conversation history. That's real progress.
+
+All three are genuine attempts to solve a real problem. But they're all working within the same constraint: context is scarce, so information needs to be curated, compressed, or retrieved on the agent's behalf. The agent itself remains stateless. Every session, it's a new arrival being handed a briefing pack.
+
+---
+
+## It's not a memory problem
+
+Here's what I kept noticing as I went deeper: the teams getting the best results weren't managing memory better. They were designing systems where agents didn't need to reconstruct context from scratch — because the context *lived somewhere*.
+
+Anthropic's engineering team put it plainly in their 2025 research: *"Write context externally, select what's relevant."* Their sub-agent architecture — where each agent operates in a clean, scoped context window backed by external state — showed a 90.2% improvement over single-agent approaches. The gain isn't from better memory management. It's from not needing it.
+
+Andrej Karpathy arrived at the same insight from a completely different direction this week. Experimenting with LLM-maintained knowledge bases, he found himself spending more tokens "manipulating knowledge" than manipulating code — storing everything as structured markdown files, having the LLM compile and maintain them, reading from that persistent store rather than rebuilding context on every call. He called it a "filing loop." The LLM writes. You read. He expected to need RAG pipelines. He didn't. What he was doing, without naming it that way, was context engineering: designing the information payload the agent receives so it never needs to reconstruct what it should already know.
+
+His conclusion: *"Room here for an incredible new product instead of a hacky collection of scripts."*
+
+Two tailwinds are making this more obvious over time, not less:
+
+**LLMs are becoming more agentic-native.** Models are getting better at working with files and external state. The friction between "agent" and "filesystem" keeps dropping.
+
+**Token costs keep falling.** The economic pressure that made aggressive context pruning necessary is easing. The elaborate infrastructure built to minimise token usage becomes less necessary when tokens are cheap.
+
+The memory-as-separate-layer architecture is being outpaced before it's finished being built.
+
+---
+
+## Give agents a home
+
+The fix isn't a better memory SDK. It's a different premise: agents should have a [persistent workspace](https://www.agents-shire.sh) — files, state, shared knowledge — that exists independently of any session or context window.
+
+When an agent writes its progress to a file, that's not a workaround. That *is* the memory. When another agent picks it up, they're not reconstructing context — they're just reading the room.
+
+This is why I built [Shire](https://www.agents-shire.sh). Not "I wanted to add memory to agents." I wanted agents to have somewhere to live.
+
+Here's a concrete example: the content team running this blog operates inside Shire. There's a content-writer agent, a social-monitor agent, an SEO specialist. Research briefs, brand guidelines, voice references, post drafts — all discrete files on a shared drive. Every session opens cold. But nobody starts from zero. Each agent reads what's relevant to the current task and gets to work.
+
+Two specific problems this eliminates — the same two that broke every memory system I tried to build:
+
+**System prompt bloat.** Try fitting a full content strategy, brand voice guide, six months of research, and a live brief into a single prompt. The agent gets dumber, not smarter. Context rot is real. The middle of a 50k-token prompt is a black hole.
+
+**Session resets.** No re-briefing. No "here's everything you need to know" preamble at the start of every conversation. The agents know what happened last session because it's written down.
+
+We use Shire to run Shire's content team. If persistent workspace didn't solve the context problem, we'd know immediately — we're living in it every day.
+
+That's the difference between a backpack and a house. RAG pipelines, summarization buffers, memory SDKs — they're all very good backpacks. Shire is the house.
+
+---
+
+## Agents don't have amnesia. They're homeless.
+
+The memory problem is real, but most solutions are treating symptoms. RAG, summarization, memory SDKs — they're sophisticated ways of managing a scarcity that doesn't have to exist.
+
+Give agents a [persistent workspace](https://www.agents-shire.sh). Let them write things down. Let other agents read them. Keep the context window clean and let the filesystem do what filesystems are good at.
+
+It's a simpler premise than a memory pipeline.
+
+Simple tends to win.
+
+---
+
+[Try Shire →](https://www.agents-shire.sh) · [Star on GitHub →](https://github.com/victor36max/shire)
