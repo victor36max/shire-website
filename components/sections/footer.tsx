@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Logo } from "@/components/logo";
 
 export function Footer() {
   return (
@@ -7,15 +7,7 @@ export function Footer() {
         {/* Logo & tagline */}
         <div>
           <span className="flex items-center gap-2 text-xl font-semibold">
-            <Image
-              src="/logo.svg"
-              alt=""
-              width={28}
-              height={28}
-              aria-hidden="true"
-              className="h-7 w-7 invert"
-              unoptimized
-            />
+            <Logo className="h-8 w-auto" variant="light" />
             Shire
           </span>
           <p className="mt-1 text-sm opacity-60">

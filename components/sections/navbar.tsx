@@ -25,7 +25,7 @@ export function Navbar() {
       >
         {/* Logo */}
         <a href="/" className="flex items-center gap-2 text-foreground">
-          <Logo className="h-7 w-7" />
+          <Logo className="h-8 w-auto" />
           <span className="text-xl font-semibold tracking-tight">Shire</span>
         </a>
 
