@@ -1,13 +1,21 @@
+import Image from "next/image";
+
 export function Footer() {
   return (
     <footer className="bg-foreground py-12 text-background lg:py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Logo & tagline */}
         <div>
-          <span className="text-xl font-semibold">
-            <span role="img" aria-label="leaf">
-              🌿
-            </span>{" "}
+          <span className="flex items-center gap-2 text-xl font-semibold">
+            <Image
+              src="/logo.svg"
+              alt=""
+              width={28}
+              height={28}
+              aria-hidden="true"
+              className="h-7 w-7 invert"
+              unoptimized
+            />
             Shire
           </span>
           <p className="mt-1 text-sm opacity-60">

@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { GitHubIcon } from "@/components/icons";
+import { Logo } from "@/components/logo";
 
 const navLinks = [
   { label: "Features", href: "/#features" },
@@ -23,11 +24,9 @@ export function Navbar() {
         aria-label="Main navigation"
       >
         {/* Logo */}
-        <a href="/" className="flex items-center gap-1.5 text-foreground">
-          <span className="text-xl" role="img" aria-label="leaf">
-            🌿
-          </span>
-          <span className="text-xl font-semibold">Shire</span>
+        <a href="/" className="flex items-center gap-2 text-foreground">
+          <Logo className="h-7 w-7" />
+          <span className="text-xl font-semibold tracking-tight">Shire</span>
         </a>
 
         {/* Desktop nav */}

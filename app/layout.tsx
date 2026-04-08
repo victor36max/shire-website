@@ -91,6 +91,9 @@ export default function RootLayout({
     >
       <head>
         <meta name="theme-color" content="#252525" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.ico" sizes="32x32" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="preconnect" href="https://github.com" />
         <link rel="dns-prefetch" href="https://github.com" />
         <script

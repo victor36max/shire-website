@@ -26,10 +26,7 @@ export function Hero() {
           style={{ letterSpacing: "-0.025em" }}
         >
           Agents that work with you,
-          <br className="hidden sm:inline" /> not for you{" "}
-          <span role="img" aria-label="leaf">
-            🌿
-          </span>
+          <br className="hidden sm:inline" /> not for you
         </h1>
 
         <p className="animate-fade-up-delay-1 mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl lg:leading-relaxed">
