@@ -1,25 +1,33 @@
+"use client";
+
 import Image from "next/image";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 interface LogoProps {
   className?: string;
-  /** Use "auto" for theme-adaptive (navbar), "light" to force white (footer on dark bg) */
+  /** "auto" swaps dark/light based on theme; "light" always shows white variant */
   variant?: "auto" | "light";
 }
 
 export function Logo({ className = "h-8 w-auto", variant = "auto" }: LogoProps) {
-  const filterClass =
-    variant === "light"
-      ? "brightness-0 invert"
-      : "dark:brightness-0 dark:invert";
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+
+  // Before hydration, show dark version to avoid flash (matches SSR default)
+  const isDark = mounted ? resolvedTheme === "dark" : false;
+  const showWhite = variant === "light" || isDark;
 
   return (
     <Image
-      src="/logo.svg"
+      src={showWhite ? "/logo-head-white.svg" : "/logo-head-dark.svg"}
       alt=""
-      width={249}
-      height={265}
+      width={176}
+      height={130}
       aria-hidden="true"
-      className={`${className} ${filterClass}`}
+      className={className}
       unoptimized
     />
   );
