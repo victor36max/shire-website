@@ -63,7 +63,7 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 2px);
   --radius-2xl: calc(var(--radius) + 4px);
-  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 }
 
 * {
@@ -73,7 +73,7 @@
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
 
 a, button, [role="button"] {
@@ -265,7 +265,7 @@ a, button, [role="button"] {
 }
 
 .prose code:not(pre code) {
-  font-family: var(--font-jetbrains-mono), ui-monospace, monospace;
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
   font-size: 0.875em;
   padding: 0.15em 0.35em;
   border-radius: calc(var(--radius) - 4px);
@@ -281,7 +281,7 @@ a, button, [role="button"] {
   border: 1px solid var(--border);
   background-color: var(--secondary);
   overflow-x: auto;
-  font-family: var(--font-jetbrains-mono), ui-monospace, monospace;
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
   font-size: 0.875rem;
   line-height: 1.65;
 }
