@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     "multi-agent collaboration",
     "AI agent orchestration",
     "AI agent workspace",
+    "AI agent file editor",
     "stateful AI agents",
   ],
   authors: [
@@ -136,6 +137,7 @@ export default function RootLayout({
                     "Sleep and resume with full state preservation",
                     "Scheduled task automation (one-time or recurring)",
                     "Supports Claude Code, OpenCode, Pi Agent and more",
+                    "Built-in file editor with syntax highlighting, markdown, and CSV spreadsheet view",
                     "Install globally via npm, run on macOS, Linux, or Windows",
                   ],
                 },

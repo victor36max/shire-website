@@ -4,7 +4,7 @@ import {
   Layers,
   MessageSquare,
   BookOpen,
-  FolderOpen,
+  FileEdit,
   Clock,
   Sparkles,
 } from "lucide-react";
@@ -56,10 +56,10 @@ const features: Feature[] = [
     ),
   },
   {
-    icon: FolderOpen,
-    title: "Shared Drive",
+    icon: FileEdit,
+    title: "Built-in File Editor",
     description:
-      "A communal filesystem synced across all agents for collaborative work on shared artifacts.",
+      "Edit agent files directly in the dashboard — Markdown with slash commands, code with syntax highlighting for 30+ languages, and CSV as an interactive spreadsheet. Agent file changes appear in real-time.",
   },
   {
     icon: Sparkles,
